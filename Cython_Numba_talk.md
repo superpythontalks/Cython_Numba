@@ -59,6 +59,7 @@
 
 ## first and best option: numpy!
 
+- built-in functions like `np.mean()` are written in highly-tuned C code
 - vectorize! (see upcoming Super Python talk)
 - but some complex loops you simply can't vectorize with numpy
 - sometimes you need complicated loop(s) that iterates over every entry in an array
@@ -145,10 +146,12 @@ numba_function = jit(python_function)
     - demos returning a 2D array instead of just a single value
 
 <p align="center">
-   <img src="pairwise_distance_timings.png" width="400">
+   <img src="pairwise_distance_timings.png" width="350">
    </a>
 </p>
 
+- newer: "Numba vs Cython: How to Choose"
+    - https://eng.climate.com/2015/04/09/numba-vs-cython-how-to-choose/
 - older: "A beginner's guide to using Python for performance computing"
     - http://scipy.github.io/old-wiki/pages/PerformancePython
 

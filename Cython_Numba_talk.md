@@ -51,6 +51,11 @@
 
 > "Premature optimization is the root of all evil" — Donald Knuth
 
+<p align="center">
+   <img src="knuth.jpg" height="200">
+   </a>
+</p>
+
 - Pareto principle, i.e. 80/20 rule, i.e. power law distribution
     - probably some small part of your code takes up most of the execution time
 - find the part of your code that's the slowest, work on that

@@ -52,7 +52,7 @@
 > "Premature optimization is the root of all evil" — Donald Knuth
 
 <p align="center">
-   <img src="knuth.jpg" height="200">
+   <img src="knuth.png" height="200">
    </a>
 </p>
 

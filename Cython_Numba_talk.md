@@ -75,7 +75,7 @@
   4. repeat 1-3 until all remaining points stop moving
 
 <p align="center">
-   <img src="GAC_sigma_0.125.png" alt="GAC" width="300">
+   <img src="GAC_sigma_0.125.png" alt="GAC" width="250">
    </a>
 </p>
 
@@ -168,3 +168,13 @@ numba_function = jit(python_function)
     - numpy - good for code that can be easily vectorized
     - Cython - fast, flexible, complicated
     - Numba - fast and simple!
+
+<p align="center">
+   <img src="cython.png" height="70">
+   </a>
+</p>
+
+<p align="center">
+   <img src="numba.png" height="100">
+   </a>
+</p>

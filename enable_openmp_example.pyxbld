@@ -1,4 +1,4 @@
-"""Giving this file the same base name as your .pyx file with enable multithreading
+"""Giving this file the same base name as your .pyx file will enable multithreading
 with OpenMP for your .pyx file"""
 
 def make_ext(modname, pyxfilename):

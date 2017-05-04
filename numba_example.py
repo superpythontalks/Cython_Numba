@@ -1,6 +1,9 @@
-"""Test numba for accelerating pure python mean() function"""
+"""Test numba for accelerating python_mean() function"""
 
-from python_example import python_mean, x
+from python_example import python_mean, python_rms, x
+
+# plain python:
+%timeit python_mean(x) ## takes about 80 ms per loop
 
 # numba:
 from numba import jit
@@ -12,8 +15,6 @@ numba_mean = jit(python_mean)
 %timeit np.mean(x) ## also 0.37 ms per loop, about 215x faster!
 
 
-
-
 # other numba options:
 numba_mean_nopython = jit(mean, nopython=True)
 numba_mean_nogil = jit(mean, nogil=True)
@@ -23,4 +24,13 @@ numba_mean_nopython_nogil = jit(mean, nopython=True, nogil=True)
 %timeit numba_mean_nogil(x) ## also 1.2 ms per loop, about 66x faster!
 %timeit numba_mean_nopython_nogil(x) ## also 1.2 ms per loop, about 66x faster!
 
-# can use numba.vectorize to parallelize your code
+# You can use numba.vectorize to parallelize your code
+
+"""Test numba for accelerating python_rms() function"""
+
+# plain python:
+%timeit python_rms(x) ## takes about 132 ms per loop
+
+# numba:
+numba_rms = jit(python_rms)
+%timeit numba_rms(x) ## 1.2 per loop, about 108x faster!
